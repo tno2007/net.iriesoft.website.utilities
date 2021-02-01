@@ -30,12 +30,20 @@ export default defineComponent({
           children: "Dependants",
         },
         {
+          type: "autocomplete",
+          name: "firstX",
+          label: "First Xyz",
+          options: [
+            "alice",
+            "wonderland"
+          ]
+        },
+        {
           type: "text",
           name: "firstNmae",
           label: "First name",
           validation: "required|not:kelly",
           errorBehavior: "submit",
-          "error-behaviorX": "submit",
         },
         {
           type: "text",
