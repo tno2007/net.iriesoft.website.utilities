@@ -50,6 +50,8 @@ export default defineComponent({
   }
 })
 */
+
+/*
 export default {
   props: {
     context: {
@@ -112,4 +114,5 @@ export default {
     },
   },
 };
+*/
 </script>

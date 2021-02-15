@@ -4,6 +4,8 @@ Vue.use(VueCompositionAPI);
 
 import VueFormulate from "@braid/vue-formulate";
 
+/*
+
 import MyFormulateAutocomplete from "./common/vue-formulate-custom-fields/MyFormulateAutocomplete.vue";
 
 Vue.component("MyFormulateAutocomplete", MyFormulateAutocomplete);
@@ -16,6 +18,8 @@ Vue.use(VueFormulate, {
     },
   },
 });
+
+*/
 
 import VueMask from "v-mask";
 Vue.use(VueMask);

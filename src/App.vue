@@ -15,6 +15,7 @@
             <b-dropdown-item to="/tools/time-converter"
               >Time Converter</b-dropdown-item
             >
+            <b-dropdown-item to="/tools/upload">Upload</b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item href="#" disabled>Disabled</b-nav-item>
         </b-navbar-nav>
