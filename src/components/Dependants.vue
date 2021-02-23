@@ -7,11 +7,34 @@
       :schema="data.formSchema"
       @submit="handleSubmit"
     />
+    <div class="w-320">
+      <div class="row justify-content-end">
+        <div class="col">
+          <button class="btn btn-block btn-primary">Back</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-block btn-primary" @click="next">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
     <pre>{{ data }}</pre>
   </div>
 </template>
 
 <script lang="ts">
+interface VueFormulateInput {
+  component: string;
+  type: string;
+  name: string;
+  label: string;
+  options: string[];
+  validation: string;
+  errorBehavior: string;
+}
+
 import {
   defineComponent,
   onMounted,
@@ -33,14 +56,11 @@ export default defineComponent({
           type: "autocomplete",
           name: "firstX",
           label: "First Xyz",
-          options: [
-            "alice",
-            "wonderland"
-          ]
+          options: ["alice", "wonderland"],
         },
         {
           type: "text",
-          name: "firstNmae",
+          name: "firstName",
           label: "First name",
           validation: "required|not:kelly",
           errorBehavior: "submit",
@@ -50,15 +70,11 @@ export default defineComponent({
           name: "lastName",
           label: "Last Name",
         },
-        {
-          type: "submit",
-          label: "Next",
-        },
       ],
       [
         {
           component: "h3",
-          children: "Dependants",
+          children: "Dependants ",
         },
         {
           type: "text",
@@ -73,8 +89,18 @@ export default defineComponent({
           label: "Date of birth",
         },
         {
-          type: "submit",
-          label: "Get in touch",
+          component: "div",
+          class: "two-buttons d-none",
+          children: [
+            {
+              type: "submit",
+              label: "Get in touch",
+            },
+            {
+              type: "submit",
+              label: "Get in touch",
+            },
+          ],
         },
       ],
     ] as any[];
@@ -82,7 +108,9 @@ export default defineComponent({
     const data = reactive({
       toastCounter: 0,
       currentFormIndex: 0,
-      formModel: {},
+      formModel: {
+        firstName: "xxxxxzxz",
+      },
       formSchema: [],
     });
 
@@ -101,7 +129,7 @@ export default defineComponent({
       });
     };
 
-    const handleSubmit = (formSubmitData: any) => {
+    const handleSubmit = (formSubmitData: any = null) => {
       //console.log("formSubmitData", formSubmitData);
       //console.log("formRef.value", formRef.value);
       //context.root.$formulate.handle(errorHandling, "handleSubmit");
@@ -117,6 +145,12 @@ export default defineComponent({
       }
     };
 
+    const next = () => {
+      console.log("abc");
+      context.root.$formulate.submit("form");
+      //handleSubmit();
+    };
+
     onMounted(() => {
       data.formSchema = formSchemas[data.currentFormIndex];
     });
@@ -124,11 +158,25 @@ export default defineComponent({
     return {
       formRef,
       data,
+      next,
       handleSubmit,
     };
   },
 });
 </script>
 
-<style>
+<style lang="scss">
+.two-buttons {
+  //margin: 10px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 320px;
+}
+.w-320 {
+  margin-top: 1.5em;
+  max-width: 320px;
+  margin-bottom: 1.5em;
+}
 </style>
