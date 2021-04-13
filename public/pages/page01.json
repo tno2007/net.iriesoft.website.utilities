@@ -1,0 +1,260 @@
+{
+  "name": "personalDetails",
+  "description": "Personal details",
+  "fields": [
+    {
+      "component": "h3",
+      "children": "Personal details (Main applicant)",
+      "name": "dependentsHeading"
+    },
+    {
+      "type": "text",
+      "name": "fullName",
+      "label": "Full name (as seen in passport):",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "passportNumber",
+      "label": "Passport number:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "date",
+      "name": "passportExpiryDate",
+      "label": "Passport expiry date:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "date",
+      "name": "dateOfBirth",
+      "label": "Date of birth:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "radio",
+      "name": "gender",
+      "label": "Gender:",
+      "validation": "required",
+      "errorBehavior": "submit",
+      "options": [
+        {
+          "value": "1",
+          "label": "Female"
+        },
+        {
+          "value": "2",
+          "label": "Male"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "criminalRecord",
+      "label": "Do you have a criminal record?",
+      "options": [
+        {
+          "value": "true",
+          "label": "Yes"
+        },
+        {
+          "value": "false",
+          "label": "No"
+        }
+      ],
+      "value": "false",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "criminalRecordMoreDetail",
+      "label": "Please provide more detail:",
+      "validation": "required",
+      "errorBehavior": "submit",
+      "visible": false
+    },
+    {
+      "type": "radio",
+      "name": "maritalStatus",
+      "label": "Please indicate your marital status:",
+      "options": [
+        {
+          "value": "1",
+          "label": "Married"
+        },
+        {
+          "value": "2",
+          "label": "Single"
+        },
+        {
+          "value": "3",
+          "label": "Civil partner"
+        },
+        {
+          "value": "4",
+          "label": "Unmarried partner"
+        },
+        {
+          "value": "5",
+          "label": "Divorced"
+        },
+        {
+          "value": "6",
+          "label": "Divorced"
+        }
+      ],
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "radio",
+      "name": "inCommunity",
+      "label": "Are you married in the community of property?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes"
+        },
+        {
+          "value": "2",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "name": "seperateAssets",
+      "label": "Are your assets seperated?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes"
+        },
+        {
+          "value": "2",
+          "label": "No"
+        }
+      ],
+      "validation": "required"
+    },
+    {
+      "type": "radio",
+      "name": "haveMarriageRegisterCopy",
+      "label": "Do you hold a copy of your marriage register?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes"
+        },
+        {
+          "value": "2",
+          "label": "No"
+        }
+      ],
+      "validation": "required"
+    },
+    {
+      "type": "radio",
+      "name": "marriageForm",
+      "label": "Please indicate your marriage register form",
+      "options": [
+        {
+          "value": "1",
+          "label": "DHA-30"
+        },
+        {
+          "value": "2",
+          "label": "DHA-BI-30"
+        },
+        {
+          "value": "3",
+          "label": "Other"
+        }
+      ],
+      "validation": "required"
+    },
+    {
+      "type": "text",
+      "name": "howLongHaveYouBeenResidingTogether",
+      "label": "How long have you been residing together (unmarried partner):",
+      "validation": "required",
+      "errorBehavior": "submit",
+      "visible": false
+    },
+    {
+      "type": "text",
+      "name": "taxNumber",
+      "label": "Tax number:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "countryOfBirth",
+      "label": "Country of birth:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "nationality",
+      "label": "Nationality:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "radio",
+      "name": "otherNationalities",
+      "label": "Do you hold any other nationalities?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes"
+        },
+        {
+          "value": "2",
+          "label": "No"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "otherNationalitiesMoreDetail",
+      "label": "Please provide more detail:",
+      "validation": "required",
+      "errorBehavior": "submit",
+      "visible": false
+    },
+    {
+      "component": "h4",
+      "children": "Contact details",
+      "name": "contactDetailsHeading"
+    },
+    {
+      "type": "text",
+      "name": "emailAddress",
+      "label": "Email Address:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "contactNumber",
+      "label": "Contact number:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    },
+    {
+      "type": "text",
+      "name": "currentResidentialAddress",
+      "label": "Current Residential Address:",
+      "validation": "required",
+      "errorBehavior": "submit"
+    }
+  ]
+}

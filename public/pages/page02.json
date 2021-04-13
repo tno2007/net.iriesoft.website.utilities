@@ -1,0 +1,27 @@
+{
+  "name": "yourDependents",
+  "description": "Your dependents",
+  "fields": [
+    {
+      "type": "radio",
+      "name": "gender",
+      "label": "Please indicate your dependant:",
+      "validation": "required",
+      "errorBehavior": "submit",
+      "options": [
+        {
+          "value": "1",
+          "label": "Spouse"
+        },
+        {
+          "value": "2",
+          "label": "Partner"
+        },
+        {
+          "value": "3",
+          "label": "Parent"
+        }
+      ]
+    }
+  ]
+}
